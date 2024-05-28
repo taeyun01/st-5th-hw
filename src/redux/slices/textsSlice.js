@@ -13,7 +13,7 @@ const textsSlice = createSlice({
   initialState,
   reducers: {
     textsReducer: (state, action) => {
-      state.texts = [...state.texts, action.payload.text];
+      state.texts = [...state.texts, action.payload.inputValue];
       localStorage.setItem("texts", JSON.stringify(state.texts));
     },
   },
